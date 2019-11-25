@@ -1,0 +1,10 @@
+$primary: darken(#428bca, 20%);
+
+@import "~bootstrap/scss/bootstrap";
+@import "imported/style.css";
+@import "imported/style_dark.css";
+@import "imported/icons.css";
+
+body {
+    background-color: #ffffff;
+}
