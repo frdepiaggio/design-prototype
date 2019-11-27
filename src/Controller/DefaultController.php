@@ -20,6 +20,21 @@ class DefaultController extends AbstractController
     public function index(): Response
     {
 
-        return $this->render('dashboard/index.html.twig');
+        $usuarioActual = $this->getUser();
+
+        $tieneAccesoGerenteGeneral = $this->isGranted('ROLE_GERENTE_GENERAL');
+        $tieneAccesoGerenteProduccion = $this->isGranted('ROLE_GERENTE_PRODUCCION');
+        $tieneAccesoGerenteComercializacion = $this->isGranted('ROLE_GERENTE_COMERCIALIZACION');
+
+        if ($tieneAccesoGerenteGeneral) {
+            return $this->render('dashboard/gerente-general.html.twig');
+        }
+        if ($tieneAccesoGerenteComercializacion) {
+            return $this->render('dashboard/gerente-comercializacion.html.twig');
+        }
+        if ($tieneAccesoGerenteProduccion) {
+            return $this->render('dashboard/gerente-produccion.html.twig');
+        }
+        return $this->render('dashboard/gerente-general.html.twig');
     }
 }

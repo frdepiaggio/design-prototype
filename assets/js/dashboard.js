@@ -1,6 +1,13 @@
+const $ = require('jquery');
+require('./imported/jquery.min');
+require('./imported/popper.min');
+require('./imported/bootstrap.min');
 require('./imported/detect');
+require('./imported/jquery.blockUI');
+require('./imported/jquery.nicescroll');
+require('./imported/jquery.slimscroll');
+require('./imported/jquery.scrollTo.min');
 require('./imported/fastclick');
-require('./imported/modernizr.min');
 require('./imported/pace.min');
 require('./imported/waves');
 require('./imported/wow.min');
@@ -28,3 +35,7 @@ require('./imported/dataTables.responsive.min');
 require('./imported/responsive.bootstrap4.min');
 require('./imported/dataTables.select.min');
 require('./imported/legacy.min');
+require('./imported/jquery.core');
+require('./imported/jquery.app');
+
+require('../css/dashboard.scss');
