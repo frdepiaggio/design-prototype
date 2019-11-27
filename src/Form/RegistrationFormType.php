@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Security\Core\Role\RoleHierarchyInterface;
@@ -69,6 +70,16 @@ class RegistrationFormType extends AbstractType
                 'multiple' => true,
                 'required' => true,
             ))
+            ->add('nombre', TextType::class, [
+                'attr' => [
+                 'placeholder' => 'Nombre'
+                ]
+            ])
+            ->add('apellido', TextType::class, [
+                'attr' => [
+                 'placeholder' => 'Apellido'
+                ]
+            ])
         ;
     }
 

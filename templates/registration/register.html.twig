@@ -7,7 +7,8 @@
     <div class="clearfix"></div>
     <div class="wrapper-page section">
         <div class="text-center">
-            <a href="login.html" class="logo"><img src="{{ asset('build/images/logoweb_mini.png') }}" alt="" srcset="" align="center"></a>
+            <a href="login.html" class="logo"><img src="{{ asset('build/images/logoweb_mini.png') }}" alt="" srcset=""
+                                                   align="center"></a>
             <h5 class="text-muted m-t-0 font-600">Fabrica Chaqueña de Anafes y Termotanques</h5>
         </div>
         <div class="m-t-40 card-box login">
@@ -17,31 +18,41 @@
             <div class="p-20">
                 {{ form_start(registrationForm) }}
 
-                    <div class="form-group">
-                        <div class="col-xs-12">
-                            {{ form_widget(registrationForm.email) }}
-                        </div>
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        {{ form_widget(registrationForm.email) }}
                     </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        {{ form_widget(registrationForm.nombre) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        {{ form_widget(registrationForm.apellido) }}
+                    </div>
+                </div>
 
-                    <div class="form-group">
-                        <div class="col-xs-12">
-                            {{ form_widget(registrationForm.plainPassword) }}
-                        </div>
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        {{ form_widget(registrationForm.plainPassword) }}
                     </div>
+                </div>
 
-                    <div class="form-group ">
-                        <div class="col-xs-12">
-                            {{ form_widget(registrationForm.roles) }}
-                        </div>
+                <div class="form-group ">
+                    <div class="col-xs-12">
+                        {{ form_widget(registrationForm.roles) }}
                     </div>
+                </div>
 
-                    <div class="form-group text-center m-t-30">
-                        <div class="col-xs-12">
-                            <button class="btn btn-custom btn-bordred btn-block waves-effect waves-light" type="submit">
-                                Guardar
-                            </button>
-                        </div>
+                <div class="form-group text-center m-t-30">
+                    <div class="col-xs-12">
+                        <button class="btn btn-custom btn-bordred btn-block waves-effect waves-light" type="submit">
+                            Guardar
+                        </button>
                     </div>
+                </div>
                 {{ form_end(registrationForm) }}
             </div>
         </div>
