@@ -21,7 +21,7 @@
     "dependencies": {
         "chartist": "^0.11.4",
         "copy-webpack-plugin": "^5.0.5",
-        "datatables.net": "^1.10.20",
+        "datatables.net": "^1.10.22",
         "datatables.net-bs4": "^1.10.20",
         "datatables.net-buttons": "^1.6.1",
         "datatables.net-responsive": "^2.2.3",
